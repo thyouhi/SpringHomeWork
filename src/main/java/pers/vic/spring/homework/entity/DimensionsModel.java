@@ -45,4 +45,13 @@ public class DimensionsModel{
     public void setHeight(float height) {
         this.height = height;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"length\":" + length +
+                ",\"width\":" + width +
+                ",\"height\":" + height +
+                '}';
+    }
 }

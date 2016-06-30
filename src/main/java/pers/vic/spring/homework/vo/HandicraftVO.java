@@ -4,10 +4,11 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import pers.vic.spring.homework.entity.DimensionsModel;
 import pers.vic.spring.homework.entity.WarehouseLocationModel;
 
+import java.math.BigDecimal;
 /**
  * 工艺品VO
  */
-@JsonSerialize(include= JsonSerialize.Inclusion.NON_NULL)
+@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class HandicraftVO {
 
     /**
@@ -23,7 +24,7 @@ public class HandicraftVO {
     /**
      * 价格
      */
-    private float price;
+    private BigDecimal price;
 
     /**
      * 标签
@@ -56,11 +57,12 @@ public class HandicraftVO {
         this.name = name;
     }
 
-    public float getPrice() {
+    public BigDecimal getPrice() {
+        price.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -86,5 +88,28 @@ public class HandicraftVO {
 
     public void setWarehouseLocation(WarehouseLocationModel warehouseLocation) {
         this.warehouseLocation = warehouseLocation;
+    }
+
+    @Override
+    public String toString() {
+        String result = "{" +
+                "\"id\":" + id +
+                ",\"name\":\"" + name + '\"' +
+                ",\"price\":" + price;
+        if (null != tags) {
+            String arrayString = "[";
+            for (int i = 0; i < tags.length; i++) {
+                arrayString += "\"" + tags[i] + "\"";
+                if (i < tags.length - 1) {
+                    arrayString += ",";
+                }
+            }
+            arrayString += "]";
+            result += ",\"tags\":" + arrayString;
+        }
+        result += ",\"dimensions\":" + dimensions +
+                ",\"warehouseLocation\":" + warehouseLocation +
+                '}';
+        return result;
     }
 }
