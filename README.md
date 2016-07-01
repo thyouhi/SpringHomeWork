@@ -21,7 +21,7 @@ version 1.0
         使用 gradle appStop 关闭应用
         使用 gradle check 执行单元测试
 
-版本管理工具：版本管理工具git
+版本管理工具：git
 
 开发工具：IntelliJ IDEA 2016
 
