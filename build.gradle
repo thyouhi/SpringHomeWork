@@ -28,6 +28,12 @@ repositories {
     mavenCentral()
 }
 
+[compileJava,compileTestJava,javadoc]*.options*.encoding = "UTF-8"
+
+dependencies {
+    testCompile gradleTestKit()
+}
+
 dependencies {
     compile(
         'org.springframework:spring-webmvc:4.1.1.RELEASE',
