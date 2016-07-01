@@ -2,6 +2,7 @@ package pers.vic.spring.homework;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,10 +18,6 @@ import org.springframework.web.context.WebApplicationContext;
  * @author Vic.Zhao
  * @since 2016年6月30日
  */
-
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring-core-config.xml","file:src/main/webapp/WEB-INF/spring-mvc-config.xml"})
-@WebAppConfiguration(value = "file:src/main/webapp")
 public class BaseTest {
 	
 	@Autowired

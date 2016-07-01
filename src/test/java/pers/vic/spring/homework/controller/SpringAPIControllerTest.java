@@ -1,6 +1,10 @@
 package pers.vic.spring.homework.controller;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 import pers.vic.spring.homework.BaseTest;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -13,6 +17,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author vic.zhao
  * @since 2016年6月30日
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/spring-core-config.xml","file:src/main/webapp/WEB-INF/spring-mvc-config.xml"})
+@WebAppConfiguration(value = "file:src/main/webapp")
 public class SpringAPIControllerTest extends BaseTest {
     /**
      * 测试getJsonTemplate()

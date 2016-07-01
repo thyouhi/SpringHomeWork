@@ -36,21 +36,21 @@ dependencies {
 
 dependencies {
     compile(
-        'org.springframework:spring-webmvc:4.1.1.RELEASE',
-        'com.alibaba:fastjson:1.2.7',
-        'com.alibaba:fastjson:1.2.7',
-        'com.fasterxml.jackson.core:jackson-databind:2.7.4',
-        'com.fasterxml.jackson.core:jackson-core:2.4.4'
+            'org.springframework:spring-webmvc:4.1.1.RELEASE',
+            'com.alibaba:fastjson:1.2.7',
+            'com.alibaba:fastjson:1.2.7',
+            'com.fasterxml.jackson.core:jackson-databind:2.7.4',
+            'com.fasterxml.jackson.core:jackson-core:2.4.4'
     )
     runtime(
-        'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0',
-        'org.skyscreamer:jsonassert:1.2.3',
-        'javax.servlet:jstl:1.2'
+            'org.apache.geronimo.specs:geronimo-servlet_3.0_spec:1.0',
+            'org.skyscreamer:jsonassert:1.2.3',
+            'javax.servlet:jstl:1.2'
     )
     testCompile(
-        'org.mockito:mockito-all:1.8.4',
-        'javax.servlet:servlet-api:3.0-alpha-1',
-        'junit:junit:4.11',
-        'org.springframework:spring-test:4.1.1.RELEASE'
+            'org.mockito:mockito-all:1.8.4',
+            'javax.servlet:servlet-api:3.0-alpha-1',
+            'junit:junit:4.11',
+            'org.springframework:spring-test:4.1.1.RELEASE'
     )
 }
